@@ -154,22 +154,17 @@
 
 % \tableofcontents
 \section*{Introduction}
-Thompson’s groups possess remarkably rich algebraic properties, and numerous generalizations have appeared in the literature. In this note we explain how they are related to 
-a different notion of a crossed group over a category. Intuitively, a crossed group over category $\cc$ is a category $\cc G$ with $\cc$ as a wide subcategory such that any 
-morphism in $\cc G$ is uniquely factored as a morphism in $\cc$ followed by an automorphism. For a fixed connected $\cc$ we consider  different crossed groups $\cc G$. 
-Its localization groupoid $\Loc \cc G$ is equivalent to some group. In this note we explain how the groups that we get resemble the Thompson's groups. 
+Thompson's groups possess remarkably rich algebraic properties, and numerous generalizations have appeared in the literature. In this note, we explore their connection to a different concept: crossed groups over a category. Intuitively, a crossed group over a category $\cc$ is a category $\cc G$ containing $\cc$ as a wide subcategory, such that any morphism in $\cc G$ uniquely factors as a morphism in $\cc$ followed by an automorphism. 
+For a fixed, connected category $\cc$, we can consider various crossed groups $\cc G$. The localization groupoid $\Loc \cc G$ of a connected category is equivalent to a group, and we will demonstrate how the groups obtained as $\Loc \cc G$ closely resemble Thompson's groups.
 
+A natural question regarding crossed groups is how to describe the homotopy type of their geometric realizations, $|\cc G|$. 
+When $\cc$ is an arbitrary small connected category, this homotopy type can be quite general, as follows from the following example. For $\cc = \Delta$ the simplex category, crossed $\Delta$-groups coincide with the crossed simplicial groups studied in \cite{fied_loday, krasauskas_skew-simplicial_1987, Berger_2010}. 
+In particular, any simplicial group is a crossed simplicial group. For a crossed simplicial group $G_*$, the authors of \cite{fied_loday} applied Quillen's Theorem B to obtain the fibration sequence
+$$|G_*| \to |\Delta| \to |\Delta G|,$$
+where $|G_*|$ is the realization of a simplicial set. This fibration sequence yields the isomorphism $\pi_i(|\Delta G|) \cong \pi_{i-1}(|G_*|)$. If we apply it to $G_*$ being a simplicial group and we use that simplicial groups model loop spaces, the realization $|\Delta G|$ can take on any homotopy type.
 
-One of the natural questions on crossed groups is the question of determining the homotopy type of their realizations $|\cc G|$. 
-If $\cc$ is an arbitrary small connected category, the homotopy type can be anything. 
-For example, if $\cc = \Delta$ is the simplex category, then crossed $\Delta$ groups are the same as crossed simplicial groups that have been studied in \cite{fied_loday, krasauskas_skew-simplicial_1987, Berger_2010}. 
-In particular, a simplicial group is a crossed simplicial group. In \cite{fied_loday} for a crossed simplicial group $G$ the authors used Quillen's theorem B to provide the fibration sequence 
-$$|G_*| \to |\Delta| \to |\Delta G|$$
-thus, $\pi_i(\Delta G) = \pi_{i-1}(|G_*|)$. Since simplicial group model loop spaces, $\Delta G$ can have any homotopy type.
-
-We focus on a simpler case, where the category $\cc G$ admits a calculus of fractions. 
-In this case, by Theorem \cite{???} the homotopy type of $\cc G$ is that of the realization of its fundamental group $B\, \pi_1 \, \Loc \cc G$.
-Thus the problem reduces to the study of the groupoid localization of the category $\cc G$.
+In this paper, we focus on the simpler case where the category $\cc G$ admits a calculus of fractions. Under this condition, Theorem~\cite{???} states that the homotopy type of $|\cc G|$ is given by the classifying space of its fundamental group, $B\, \pi_1 \, \Loc \cc G$. Consequently, the problem reduces to studying the groupoid localization of the category $\cc G$.
+Thus the morale of this paper is that the study of geometric realization of crossed $\cc$-groups for Ore categories $\cc$ is the study of generalized Thompson's groups.
 
 
 \subsection*{Overview of results}
@@ -183,16 +178,16 @@ First, we define crossed groups and study their basic properties. Then we prove 
 
 
 
-Notable examples include those developed in 
-\cite{aramayona2019asymptoticmappingclassgroups, belk2007thompsonsgroupf, zaremsky2022usersguidecloningsystems, Witzel_2019}. 
-Each of these constructions employs Ore categories and their localizations as the principal framework for constructing the corresponding groups.  
+% Notable examples include those developed in 
+% \cite{aramayona2019asymptoticmappingclassgroups, belk2007thompsonsgroupf, zaremsky2022usersguidecloningsystems, Witzel_2019}. 
+% Each of these constructions employs Ore categories and their localizations as the principal framework for constructing the corresponding groups.  
 
-In this note, we propose an additional generalization, which also makes essential use of Ore categories and their localizations. 
-Although our approach is conceptually related to the perspectives of \cite{Witzel_2019, belk2007thompsonsgroupf}, we aim to present it from a distinct viewpoint that may clarify certain algebraic properties of these groups.
-In particular, our approach allows us to prove that the proposed class of generalized Thompson's groups is closed under taking subgroups and provide a structural theorem.
-For a standard treatment of original Thompson groups \( F \), \( T \), and \( V \), we refer the reader to \cite{MR1426438}.  
+% In this note, we propose an additional generalization, which also makes essential use of Ore categories and their localizations. 
+% Although our approach is conceptually related to the perspectives of \cite{Witzel_2019, belk2007thompsonsgroupf}, we aim to present it from a distinct viewpoint that may clarify certain algebraic properties of these groups.
+% In particular, our approach allows us to prove that the proposed class of generalized Thompson's groups is closed under taking subgroups and provide a structural theorem.
+% For a standard treatment of original Thompson groups \( F \), \( T \), and \( V \), we refer the reader to \cite{MR1426438}.  
 
-To preserve the continuity of exposition, detailed computational proofs are collected at the end of the paper.
+% To preserve the continuity of exposition, detailed computational proofs are collected at the end of the paper.
 
 
 
@@ -261,7 +256,7 @@ where $N$ is a genuine $\Tau$-group.
 Next, we prove that a subgroup of a generalized Thompson's group is also a generalized Thompson's group. 
 We deliberately omit mentioning the base category above, since the correct formulation is the following.
 
-\begin{theorem*}[Theorem~\ref{Theorem-B}]
+\begin{theorem*}[Theorem~\ref{thm:Theorem-B}]
     Let $\F_\cc (G)$ be a generalized $\cc$-Thomspon's group and let $H \leq \F_\cc(G)$ be its subgroup. 
     Then there exists a sufficiently good category $\qq$ and an injective $\qq$-group $N$ so that $$H \cong \F_\qq(N).$$
 \end{theorem*}
@@ -421,19 +416,19 @@ This defines the category $\mathsf{Crossed}(\mathcal{C})$ of crossed $\mathcal{C
 \section{General knowledge on groupoids and localizations}
 
 The full subcategory of groupoids $\mathsf{Gpd}$ is reflective in $\mathsf{Cat}$; that is, the inclusion $\mathsf{Gpd} \to \mathsf{Cat}$ has a left adjoint $\mathsf{Loc} \colon \mathsf{Cat} \to \mathsf{Gpd}$.
-Denote as $\loc : \Id_{\Cat} \Rightarrow \Loc$ the corresponding coaugmentation natural transformation.
-
+Denote as $\loc : \Id_{\Cat} \Rightarrow \Loc$ the corresponding coaugmentation natural transformation. A simple construction for the groupoid $\Loc \cc$ comes from a Quillen theorem. 
+\begin{theorem}[Quillen, \textcolor{red}{add reference to quillen}]
+The groupoid $\Loc \cc$ is canonically isomorphic to the fundamental groupoid of the realization of the nerve of $\cc$.
+\end{theorem}
 
 \begin{definition}\label{def:isofibration}
-    a map is isofibration if
+A functor \(p \colon \ee \to \bb\) is an \textit{isofibration} if for all objects \(y \in \ee\) and isomorphisms \(\varphi \colon b \to p(y)\), there is an isomorphism \(\hat{\varphi} \colon \hat{b} \to y\) such that \(p(\hat{\varphi}) = \varphi\).
 \end{definition}
-
-For example, epimorphisms of crossed groups are isofibrations.
-
+For example, epimorphisms of crossed groups are isofibrations.\textcolor{red}{and what?}
 
 
 \begin{definition}\label{def:covering}
-    a map is cover if
+    A functor \(p \colon \ee \to \bb\) is a \textit{covering} if it has the unique right lifting property for the inclusions \(d^0, d^1 \colon [0] \to [1]\). \textcolor{red}{also add May's simpler explanation of what's going on}
 \end{definition}
 
 
@@ -441,6 +436,138 @@ For example, epimorphisms of crossed groups are isofibrations.
     admits a calculus of fractions
 \end{definition}
 
+
+\begin{definition}
+We say that a category \(\cc\) admits a \textit{calculus of left fractions} (\textcolor{red}{add reference to Gabriel-Zisman})
+if it possesses the following properties:
+\begin{enumerate}
+\item (\textit{left Ore condition}) one can complete a diagram of the form \(\bullet \leftarrow \bullet \rightarrow \bullet\) to a commutative square:
+\[\begin{tikzcd}[cramped]
+	\bullet && \bullet \\
+	\\
+	\bullet && {\bullet;}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-1, to=3-1]
+	\arrow[dashed, from=1-3, to=3-3]
+	\arrow[dashed, from=3-1, to=3-3]
+\end{tikzcd}\]
+\item (\textit{ (weak) left cancellability}) for a commutative diagram of the form \(\bullet \rightarrow \bullet \rightrightarrows \bullet\) there exists a morphism coequalizing the parallel arrows:
+\[\begin{tikzcd}[cramped]
+	\bullet & \bullet & \bullet & {\bullet.}
+	\arrow[from=1-1, to=1-2]
+	\arrow[shift left=2, from=1-2, to=1-3]
+	\arrow[shift right=2, from=1-2, to=1-3]
+	\arrow[dashed, from=1-3, to=1-4]
+\end{tikzcd}\]
+\end{enumerate}
+% We say that a category \(\cc\) admits a \textit{calculus of right fractions}, if the category \(\cc^\op\) admits a calculus of left fractions.
+\end{definition}
+
+\begin{definition}
+    We say that a category \(\cc\) is (strongly) left cancellable if $ab = ac \Rightarrow b = c$.
+\end{definition}
+Obviously, strong left cancellability implies weak left cancellability.
+
+These definitions play the following role in the world of localizations:
+\begin{definition}
+    
+\end{definition}
+
+\subsection{Injectivity condition on crossed groups}
+It is obvious that for for the crossed $\cc$ group $G$ to have the category $\cc G$ satisfy Ore conditions it is necessary for $\cc$ to satisfy them also. 
+To formulate the sufficient and necessary conditions for the Ore properties to be satisfied by $\cc G$ we introduce a new notion. 
+\begin{definition}
+We say that a crossed $\cc$-group $G$ is \textit{injective} if for every morphism $f \in \Arr(\cc)$, its action $f^* \colon G_{\dom f} \to G_{\cod f}$, defined by the presheaf structure, is an injective function.
+\end{definition}
+In the appendix we prove tha the injectivity condition fully characterizes those $G$ with Ore $\cc G$. That is, the following lemma holds.
+\begin{lemma}\label{CrossedOreLocalize}
+Let $\cc$ be a small category and $G$ a crossed group over it. The following conditions are equivalent:
+\begin{enumerate}
+  \item The category $\cc G$ is an Ore category;
+  \item $\cc$ is an Ore category, and $G$ is injective.
+\end{enumerate}
+\end{lemma}
+
+We organize the introduced classes of categories and their crossed groups into full subcategories of corresponding categories.
+\begin{definition}\label{goodcategories}
+\begin{enumerate}
+    \item Define $\GOCat$ to be the full subcategory of $\Cat$ whose objects are gaunt, connected Ore categories.
+    \item For a fixed $\cc \in \GOCat$, define $\GOCrossed(\cc)$ to be the full subcategory of $\Crossed(\cc)$ of all injective crossed groups.
+    \item Define $\GOCrossed$ as the full subcategory of $\Crossed$ consisting of pairs $(\cc, G)$ such that $\cc \in \GOCat$ and $G \in \GOCrossed(\cc)$.
+\end{enumerate}
+\end{definition}
+
+
+
+\section{Subgroups of $\pi_1$ of localizations}
+Let $G = \pi_1 \; \Loc \cc \Tilde{G}$ and let $H \leq G$ be some subgroup of $G$. In this section we explain how one can build a certain small category $\qq \in \GOCat$ and an injective crossed $\qq$-group $\Tilde{H}$ such that 
+$H = \pi_1 \; \Loc \qq \Tilde{H}$. 
+
+% In this section we prove the following result: the class of all generalized Thompson's groups (without a fixed base category) is closed under subgroups. That is, we prove the following theorem.
+% \begin{theorem}\label{Theorem-B}
+%     Let $H \leq \F_\cc(G)$ be a subgroup of a generalized Thompson's group. Then there exist $\dd \in \GOCat_\ast, N \in \GOCrossed(\dd)$ such that $H = \F_\dd(N)$. Also, the construction of $\dd$ and $N$ is functorial. 
+% \end{theorem}
+
+
+We use a reformulation of the Galois correspondence principle in the groupoid language (see~\cite{may_concise_1999}). For the exposition to be self-contained, we remind here the basics of this theory. 
+
+
+All covers of a fixed groupoid $\bb$ form a category, which we denote $\Cov(\bb)$. In order to formulate the Galois correspondence, we need to introduce the category $\Subgroup G$ for a group $G$.~Put
+\begin{enumerate}
+    \item Objects of $\Subgroup G$ to be the subgroups of $G$;
+    \item Morphisms from $H \leq G$ to $N \leq G$ to be the set $\{ g \in  G \; : \; g^{-1}Hg \subset N\}$ with the obvious composition law.
+\end{enumerate}
+
+\begin{theorem}[Galois correspondence theorem, ch. 3 in~\cite{may_concise_1999}]\label{thm:Galois-corresp}
+    Let $\Gamma$ be a small connected groupoid with a fixed object. There is a natural in $\Gamma$ equivalence of categories: 
+    $$\Tilde{\Eps} \colon \Subgroup G \longleftrightarrow \Cov(\Gamma) : \!\pi_1$$
+\end{theorem}
+
+\begin{theorem}[Construction of crossed group for subgroup]\label{thm:Theorem-B}
+    
+\end{theorem}
+
+
+
+\subsection*{Proof of Theorem~\ref{thm:Theorem-B}}
+Let $H \leq \F_\cc(G)$ be a subgroup. By Galois correspondence theorem~\ref{thm:Galois-corresp} we obtain a group covering $\ee \to \Loc \cc G$. Consider the following pullback diagram. 
+
+% https://q.uiver.app/#q=WzAsNixbMCwyLCJcXG1hdGhjYWx7Q30iXSxbMiwyLCJcXG1hdGhjYWx7Q31HIl0sWzQsMiwiXFx0ZXh0e0xvY31cXCxcXG1hdGhjYWx7Q31HIl0sWzQsMCwiRSJdLFsyLDAsIlgiXSxbMCwwLCJXIl0sWzMsMiwiXFx0ZXh0e2NvdmVyfSJdLFsxLDJdLFs0LDFdLFs0LDNdLFs0LDIsIiIsMCx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dLFswLDFdLFs1LDBdLFs1LDRdLFs1LDEsIiIsMCx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dXQ==
+\[\begin{tikzcd}
+	\mathcal{Q} && X && \ee \\
+	\\
+	{\mathcal{C}} && {\mathcal{C}G} && {\text{Loc}\,\mathcal{C}G}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-1, to=3-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=3-3]
+	\arrow[from=1-3, to=1-5]
+	\arrow[from=1-3, to=3-3]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-3, to=3-5]
+	\arrow["{\text{cover}}", from=1-5, to=3-5]
+	\arrow[from=3-1, to=3-3]
+	\arrow[from=3-3, to=3-5]
+\end{tikzcd}\]
+
+We  utilize the following technical statements that we prove in the appendix. 
+
+\begin{lemma}\label{Lm:OrePullBack}
+    Let $\cc \to \bb$ be an inclusion of an Ore category to a groupoid and let $p \colon \ee \to \bb$ be a groupoid covering. Then the pullback $\ee \times_\bb \cc$ is an Ore category.
+\end{lemma}
+
+\begin{lemma}\label{technical1}
+    Let $\cc$ be a connected Ore category, let $p \colon \ee \to \Loc \cc$ be a groupoid covering. Then the structural map~ $\pi_\ee \colon \cc \times_{\Loc \cc} \ee \to \ee$ induces an equivalence of categories 
+    $$\Loc(\cc \times_{\Loc \cc} \ee ) \to \ee.$$
+\end{lemma}
+
+\begin{lemma}\label{technical2}
+    In the diagram above
+    \begin{enumerate}
+        \item The category $\qq$ is a connected gaunt Ore category,
+        \item The functor $\qq \to X$ is an inclusion of a $\GOCat$ category into its crossed group category. 
+    \end{enumerate}
+\end{lemma}
+
+Using Lemma~\ref{technical2} we conclude that $X \cong \qq N_*$ for some crossed $\qq$-group $N_*$. Using Lemma~\ref{technical1} we see that $E \cong \Loc \qq N_*$. Hence, $H = \pi_1(\Loc \qq N_*) =: \F_\qq(N)$. By the fact that the construction is a pullback, $\qq$ and $N$ are functorial. 
 
 
 
@@ -497,30 +624,6 @@ The following two conditions are equivalent:
 \end{theorem}
 Morphisms of the form $pq^{-1}$ in the category $\Loc \cc$ will be referred to as \textit{formal fractions}.
 
-\subsection{Injectivity condition on crossed groups}
-
-It is obvious that for for the crossed $\cc$ group $G$ to have the category $\cc G$ satisfy Ore conditions it is necessary for $\cc$ to satisfy them also. 
-To formulate the sufficient and necessary conditions for the Ore properties to be satisfied by $\cc G$ we introduce a new notion. 
-\begin{definition}
-We say that a crossed $\cc$-group $G$ is \textit{injective} if for every morphism $f \in \Arr(\cc)$, its action $f^* \colon G_{\dom f} \to G_{\cod f}$, defined by the presheaf structure, is an injective function.
-\end{definition}
-In the appendix we prove tha the injectivity condition fully characterizes those $G$ with Ore $\cc G$. That is, the following lemma holds.
-\begin{lemma}\label{CrossedOreLocalize}
-Let $\cc$ be a small category and $G$ a crossed group over it. The following conditions are equivalent:
-\begin{enumerate}
-  \item The category $\cc G$ is an Ore category;
-  \item $\cc$ is an Ore category, and $G$ is injective.
-\end{enumerate}
-\end{lemma}
-
-We organize the introduced classes of categories and their crossed groups into full subcategories of corresponding categories.
-\begin{definition}\label{goodcategories}
-\begin{enumerate}
-    \item Define $\GOCat$ to be the full subcategory of $\Cat$ whose objects are gaunt, connected Ore categories.
-    \item For a fixed $\cc \in \GOCat$, define $\GOCrossed(\cc)$ to be the full subcategory of $\Crossed(\cc)$ of all injective crossed groups.
-    \item Define $\GOCrossed$ as the full subcategory of $\Crossed$ consisting of pairs $(\cc, G)$ such that $\cc \in \GOCat$ and $G \in \GOCrossed(\cc)$.
-\end{enumerate}
-\end{definition}
 
 
 \subsection{Generalized Thompson's groups}
@@ -575,79 +678,6 @@ The following two lemmas follow easily from \ref{Normal-form}.
 \begin{lemma}
     For each $t \in */\cc$ the map $G_{\cod\; t} \to \F_\cc(G)$ given by $g \mapsto (t, g, t)$ is a monomorphism of groups. \qed 
 \end{lemma}
-
-
-\section{Closed under subgroups}
-In this section we prove the following result: the class of all generalized Thompson's groups (without a fixed base category) is closed under subgroups. That is, we prove the following theorem.
-\begin{theorem}\label{Theorem-B}
-    Let $H \leq \F_\cc(G)$ be a subgroup of a generalized Thompson's group. Then there exist $\dd \in \GOCat_\ast, N \in \GOCrossed(\dd)$ such that $H = \F_\dd(N)$. Also, the construction of $\dd$ and $N$ is functorial. 
-\end{theorem}
-
-
-For the proof we use a reformulation of the Galois correspondence principle in the groupoid language (see~\cite{may_concise_1999}). For the exposition to be self-contained, we remind here the basics of this theory. 
-
-\begin{definition}
-    Let $\ee, \bb$ be two small groupoids. A cover $p \colon \ee \to \bb$ is a functor such that \begin{enumerate}
-        \item It is surjective on objects;
-        \item It is bijective on the slice-categories $x/\ee$ for all $x \in \Obj(\ee)$. 
-    \end{enumerate}
-\end{definition}
-
-All covers of a fixed groupoid $\bb$ form a category, which we denote $\Cov(\bb)$. In order to formulate the Galois correspondence, we need to introduce the category $\Subgroup G$ for a group $G$.~Put
-\begin{enumerate}
-    \item Objects of $\Subgroup G$ to be the subgroups of $G$;
-    \item Morphisms from $H \leq G$ to $N \leq G$ to be the set $\{ g \in  G \; : \; g^{-1}Hg \subset N\}$ with the obvious composition law.
-\end{enumerate}
-
-\begin{theorem}[Galois correspondence theorem, ch. 3 in~\cite{may_concise_1999}]\label{thm:Galois-corresp}
-    Let $\Gamma$ be a small connected groupoid with a fixed object. There is a natural in $\Gamma$ equivalence of categories: 
-    $$\Tilde{\Eps} \colon \Subgroup G \longleftrightarrow \Cov(\Gamma) : \!\pi_1$$
-\end{theorem}
-
-
-\subsection*{Proof of Theorem~\ref{Theorem-B}}
-Let $H \leq \F_\cc(G)$ be a subgroup. By Galois correspondence theorem~\ref{thm:Galois-corresp} we obtain a group covering $\ee \to \Loc \cc G$. Consider the following pullback diagram. 
-
-% https://q.uiver.app/#q=WzAsNixbMCwyLCJcXG1hdGhjYWx7Q30iXSxbMiwyLCJcXG1hdGhjYWx7Q31HIl0sWzQsMiwiXFx0ZXh0e0xvY31cXCxcXG1hdGhjYWx7Q31HIl0sWzQsMCwiRSJdLFsyLDAsIlgiXSxbMCwwLCJXIl0sWzMsMiwiXFx0ZXh0e2NvdmVyfSJdLFsxLDJdLFs0LDFdLFs0LDNdLFs0LDIsIiIsMCx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dLFswLDFdLFs1LDBdLFs1LDRdLFs1LDEsIiIsMCx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dXQ==
-\[\begin{tikzcd}
-	\mathcal{Q} && X && \ee \\
-	\\
-	{\mathcal{C}} && {\mathcal{C}G} && {\text{Loc}\,\mathcal{C}G}
-	\arrow[from=1-1, to=1-3]
-	\arrow[from=1-1, to=3-1]
-	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=3-3]
-	\arrow[from=1-3, to=1-5]
-	\arrow[from=1-3, to=3-3]
-	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-3, to=3-5]
-	\arrow["{\text{cover}}", from=1-5, to=3-5]
-	\arrow[from=3-1, to=3-3]
-	\arrow[from=3-3, to=3-5]
-\end{tikzcd}\]
-
-We  utilize the following technical statements that we prove in the appendix. 
-
-\begin{lemma}\label{Lm:OrePullBack}
-    Let $\cc \to \bb$ be an inclusion of an Ore category to a groupoid and let $p \colon \ee \to \bb$ be a groupoid covering. Then the pullback $\ee \times_\bb \cc$ is an Ore category.
-\end{lemma}
-
-\begin{lemma}\label{technical1}
-    Let $\cc$ be a connected Ore category, let $p \colon \ee \to \Loc \cc$ be a groupoid covering. Then the structural map~ $\pi_\ee \colon \cc \times_{\Loc \cc} \ee \to \ee$ induces an equivalence of categories 
-    $$\Loc(\cc \times_{\Loc \cc} \ee ) \to \ee.$$
-\end{lemma}
-
-\begin{lemma}\label{technical2}
-    In the diagram above
-    \begin{enumerate}
-        \item The category $\qq$ is a connected gaunt Ore category,
-        \item The functor $\qq \to X$ is an inclusion of a $\GOCat$ category into its crossed group category. 
-    \end{enumerate}
-\end{lemma}
-
-Using Lemma~\ref{technical2} we conclude that $X \cong \qq N_*$ for some crossed $\qq$-group $N_*$. Using Lemma~\ref{technical1} we see that $E \cong \Loc \qq N_*$. Hence, $H = \pi_1(\Loc \qq N_*) =: \F_\qq(N)$. By the fact that the construction is a pullback, $\qq$ and $N$ are functorial. 
-
-
-
-
 
 
 
@@ -861,7 +891,7 @@ Given a cloning system $(i, \{\rho_n\}_{n \ge 1}, \{\kappa_k^n\}_{n \ge 1, 1 \le
 Let $(i, \{\rho_n\}_{n \ge 1}, \{\kappa_k^n\}_{n \ge 1, 1 \le k \le n})$ be a cloning system. Then the assignment $n \mapsto G_n$ defines a crossed $\Tau$-group with $e_i$ given by $\kappa_i$.
 \end{lemma}
 
-It is worth noting that a system of structure maps $G_n \xrightarrow{i_{n,m}} G_m$ is not essential for defining a Thompson-like group. This was already observed by S.~Witzel in \cite{Witzel_2019}, where an alternative formulation based on the \emph{internal indirect product} of categories was introduced. The definition arising from crossed $\Tau$-groups is essentially equivalent to Witzel’s formulation. However, our approach makes the connection with algebraic topology more transparent and facilitates results such as Theorem~\ref{Theorem-B}.
+It is worth noting that a system of structure maps $G_n \xrightarrow{i_{n,m}} G_m$ is not essential for defining a Thompson-like group. This was already observed by S.~Witzel in \cite{Witzel_2019}, where an alternative formulation based on the \emph{internal indirect product} of categories was introduced. The definition arising from crossed $\Tau$-groups is essentially equivalent to Witzel’s formulation. However, our approach makes the connection with algebraic topology more transparent and facilitates results such as Theorem~\ref{thm:Theorem-B}.
 
 
 \section{Structure theorem and its implications}
